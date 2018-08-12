@@ -22,6 +22,8 @@ App({
     // })
     http.getRequest(url.phoneInfo,{tel:'15623642771'}).then(res =>{
       console.log('结果',res)
+    }).finally(()=>{
+      console.log('完成！')
     })
 
     // 获取用户信息

@@ -61,7 +61,7 @@ class Http {
         })
     }
     wxLogin() {
-        return this.wxPromisify(wx.Login)
+        return this.wxPromisify(wx.login)
     }
     wxGetSetting() {
         return this.wxPromisify(wx.getSetting)

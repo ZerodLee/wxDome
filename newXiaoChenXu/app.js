@@ -12,14 +12,14 @@ App({
     wx.setStorageSync('logs', logs)
 
     // 登录
-    // wx.login({
-    //   success: res => {
-    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
-    //   }
-    // })
-    http.wxLogin().then(res => {
-      console.log('成功了！')
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      }
     })
+    // http.wxLogin().then(res => {
+    //   console.log('成功了！')
+    // })
     http.getRequest(url.phoneInfo,{tel:'15623642771'}).then(res =>{
       console.log('结果',res)
     }).finally(()=>{
